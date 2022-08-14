@@ -4,8 +4,8 @@ import asyncio
 import threading
 import time
 
-HOST = "localhost"
-PORT = 4445
+HOST = "HOSTIP"
+PORT = #PORT MUST BE INT
 Address = ((HOST,PORT))
 ConnectedList = ["LIST"]
 
@@ -57,8 +57,8 @@ async def menu():
                 listPrint()
                 addrChoice = input("Select address: ")
                 messageText = input("Message:  ")
-                c = ConnectedList[int(addrChoice)][0]
-                c.send(messageText.encode("utf-8"))
+                client = ConnectedList[int(addrChoice)][0]
+                client.send(messageText.encode("utf-8"))
                 
             else:
                 print("Liste Bos!")
@@ -68,8 +68,8 @@ async def menu():
                 listPrint()
                 addrChoice = input("Select address: ")
                 messageText = input("Command:  ")
-                c = ConnectedList[int(addrChoice)][0]
-                c.send(f"CMD{messageText}".encode("utf-8"))
+                client = ConnectedList[int(addrChoice)][0]
+                client.send(f"CMD{messageText}".encode("utf-8"))
             else:
                 print("Liste Bos!")
                 await asyncio.sleep(3)
@@ -108,6 +108,6 @@ try:
                 print("Aktif client yok!")
                 errorResult = True
 except Exception as e:
-    print(f"\nHata veya sizin tarafinizdan cikis yapildi.\n{e}")
+    print(f"\nHata veya sizin tarafinizdan cikis yapildi.\n")
     exit()
 
