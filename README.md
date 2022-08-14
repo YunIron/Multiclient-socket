@@ -18,4 +18,4 @@ Debugsuzdur, inputlarda yanlis degerde sıkıntı çıkar.
 <li>msg</li>
 <ul>Client'e mesaj atmanızı sağlar.</ul>
 <li>cmd</li>
-<ul>Client üzerinden cmd komutlarını çalıştırabilmenizi yarar.</ul>
+<ul>Client üzerinden cmd komutlarını çalıştırabilmenize yarar.</ul>
