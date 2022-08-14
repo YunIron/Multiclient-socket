@@ -1,4 +1,3 @@
-from msilib.schema import ControlEvent
 import socket
 import os
 import asyncio
@@ -87,10 +86,10 @@ try:
     menuWarn = False
     clientWarn = False
     while True:
-            t2 = threading.Thread(target=checkClientsIsOnline)
-            t2.start()
-            t = threading.Thread(target=clientaccept)
-            t.start()
+            checkThread = threading.Thread(target=checkClientsIsOnline)
+            checkThread.start()
+            acceptThread = threading.Thread(target=clientaccept)
+            acceptThread.start()
             if len(ConnectedList) > 1:
                 if menuWarn == False:
                     os.system("cls")
