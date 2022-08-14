@@ -3,8 +3,8 @@ import socket
 import os
 
 
-HOST = "localhost"
-PORT = 4445
+HOST = "HOSTIP"
+PORT = #PORT MUST BE INT
 
 s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 s.connect((HOST, PORT))
